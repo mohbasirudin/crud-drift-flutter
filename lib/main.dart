@@ -4,8 +4,6 @@ import 'package:crud_drift/database/init.dart';
 import 'package:drift/drift.dart' as drift;
 import 'package:flutter/material.dart';
 
-final _mKey = GlobalKey<ScaffoldMessengerState>();
-
 void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
@@ -18,9 +16,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      scaffoldMessengerKey: _mKey,
-      home: const Home(),
+    return const MaterialApp(
+      home: Home(),
     );
   }
 }
